@@ -51,6 +51,7 @@ app.post('/', function(req, res) {
                                 if (error !== null) {
                                     res.json(500, error);
                                 } else {
+                                    res.attachment(outputFilePath);
                                     res.sendfile(outputFilePath);
                                 }
                             });
